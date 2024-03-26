@@ -13,13 +13,36 @@
             color: deeppurple;
             text-align: center;
         }
+
+        .video-container {
+            display: none;
+        }
     </style>
+    <script>
+        function toggleVideo() {
+            var videoContainer = document.getElementById("video-container");
+            if (videoContainer.style.display === "none") {
+                videoContainer.style.display = "block";
+            } else {
+                videoContainer.style.display = "none";
+            }
+        }
+    </script>
 </head>
 
 <body>
-
     <h1>Portfolio</h1>
-    <p>demo projects here</p>
+    <p>Fun Mechanics</p>
+    <br>
+    <hr style="border: 2px solid orange;">
+    <section>
+        <button onclick="toggleVideo()">Earth Shotgun</button>
+
+        <div id="video-container" class="video-container">
+            <video src="EarthShotgun.mov" controls></video>
+        </div>
+    </section>
+
 
 </body>
 
