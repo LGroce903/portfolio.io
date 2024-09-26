@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Let's Get Quizzy</title>
+    <style>
+       
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+#game-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 9 / 16 = 0.5625 */
+    background-color: black;
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+
+#game-container > .game-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+    #header h1 {
+        color: white;
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+    }
+    </style>
+</head>
+<body>
+    <div id = "header">
+        <h1>Let's Get Quizzy!</h1>
+
+    </div>
+    <div id="game-container"></div>
+
+    <script src="https://cdn.unity.com/unity-webgl/Build/UnityLoader.js"></script>
+    <script>
+        // Replace 'Build/YourGame.json' with the path to your Unity WebGL build
+        var gameInstance = UnityLoader.instantiate("game-container", "Build/YourGame.json");
+    </script>
+</body>
+</html>
