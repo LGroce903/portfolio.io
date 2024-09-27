@@ -38,16 +38,18 @@
     </style>
 </head>
 <body>
-    <div id = "header">
+    <div id="header">
         <h1>Let's Get Quizzy!</h1>
-
     </div>
     <div id="game-container"></div>
 
-    <script src="https://cdn.unity.com/unity-webgl/Build/UnityLoader.js"></script>
+    <script src="Build/YourGame.loader.js"></script>
     <script>
-        // Replace 'Build/YourGame.json' with the path to your Unity WebGL build
-        var gameInstance = UnityLoader.instantiate("game-container", "QuizAttempt1/Build/QuizAttempt1.json");
+        createUnityInstance(document.querySelector("#game-container"), {
+            dataUrl: "Build/YourGame.data.unityweb",
+            frameworkUrl: "Build/YourGame.wasm.framework.unityweb",
+            codeUrl: "Build/YourGame.wasm.code.unityweb",
+        });
     </script>
 </body>
 </html>
